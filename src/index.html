@@ -1,17 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./scss/normalize.scss">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>runSmart</title>
 </head>
+
 <body>
-  
+  <!-- section 1 -->
+  <section class="section-1">
+    <div class="container">
+
+      <!-- header -->
+      <header class="header">
+        <a class="logo header__logo" href="#">
+          <img src="./img/logo.png" alt="logo">
+        </a>
+        <div class="header__oficial">
+          Официальный представитель
+          <span>Garmin, Polar, Suunto</span>
+        </div>
+        <div class="header__contacts">
+          <a class="header__phone" href="tel:+74999228974">+7 (499) 922-89-74</a>
+          <button class="button">заказать звонок</button>
+        </div>
+      </header>
+
+      <!-- promo -->
+      <div class="promo">
+        <h1 class="promo__header">Подбор пульсометра</h1>
+        <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
+
+        <ul class="promo__icons">
+          <li class="promo__icon">
+            <img src="./img/icons/stopwatch.svg" alt="watch">
+            Время подбора: 10 минут
+          </li>
+          <li class="promo__icon">
+            <img src="./img/icons/hand-cart.svg" alt="hand-cart">
+            Бесплатная доставка
+          </li>
+          <li class="promo__icon">
+            <img src="./img/icons/messages.svg" alt="messages">
+            Ответим на все вопросы
+          </li>
+        </ul>
+        <button class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
+        <div class="section-1__link">
+          или 
+          <a href="#">перейти в каталог</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- section 2 -->
+
+<section class="advantage">
+  <div class="container">
+    <h2 class="advantage__header">Наши преимущества</h2>
+    
+    <div class="advantage__wrapper">
+
+      <div class="advantage__block">
+        <img class="icon" src="./img/icons/advantage/cup.svg" alt="cup">
+        <h3 class="advantage__subheader">Делимся опытом</h3>
+        <div class="text advantage__text">
+          Наши сотрудники всегда готовы поделиться своим опытом, 
+          так как сами бегают полумарафоны, переплыли Босфор, 
+          готовятся к соревнованиям по триатлону!
+        </div>
+      </div>
+
+      <div class="advantage__block">
+        <img class="icon" src="./img/icons/advantage/heart.svg" alt="heart">
+        <h3 class="advantage__subheader">Заботимся о здоровье</h3>
+        <div class="text advantage__text">
+          Мы работаем для того, чтобы Ваши занятия спортом шли на пользу 
+          Вашему здоровью и были в радость Вам и Вашим близким!
+        </div>
+      </div>
+
+      <div class="advantage__block">
+        <img class="icon" src="./img/icons/advantage/shoe.svg" alt="shoe">
+        <h3 class="advantage__subheader">Учим бегать</h3>
+        <div class="text advantage__text">
+        Помогаем с обучением правильной технике бега! 
+        Дружим с крупнейшей школой бега в России - 
+        <span>I LOVE RUNNING</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 </body>
+
 </html>

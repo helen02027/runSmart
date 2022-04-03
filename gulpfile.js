@@ -9,7 +9,6 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
-const gulpPug = require('gulp-pug');
 const htmlmin = require('gulp-htmlmin');
 const size = require('gulp-size');
 const newer = require('gulp-newer');
@@ -20,10 +19,6 @@ const del = require('del');
 
 // Пути исходных файлов src и пути к результирующим файлам dest
 const paths = {
-  pug: {
-    src: ['src/**/*.pug', '!./node_modules/**'],
-    dest: 'dist/',
-  },
   html: {
     src: ['src/**/*.html'],
     dest: 'dist/',
@@ -57,24 +52,6 @@ const paths = {
 // Очистить каталог dist, удалить все кроме изображений
 function clean() {
   return del(['dist/*', '!dist/img']);
-}
-
-// pug
-function pug() {
-  return gulp
-    .src(paths.pug.src)
-    .pipe(
-      gulpPug({
-        basedir: __dirname,
-      })
-    )
-    .pipe(
-      size({
-        showFiles: true,
-      })
-    )
-    .pipe(gulp.dest(paths.html.dest))
-    .pipe(browsersync.stream());
 }
 
 // HTML
@@ -207,7 +184,6 @@ function watch() {
   });
   gulp.watch(paths.html.dest).on('change', browsersync.reload);
   gulp.watch(paths.fonts.src, fonts);
-  gulp.watch(paths.pug.src, pug);
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
@@ -219,7 +195,6 @@ function watch() {
 // Таски для ручного запуска с помощью gulp clean, gulp html и т.д.
 exports.fonts = fonts;
 exports.clean = clean;
-exports.pug = pug;
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
@@ -231,7 +206,6 @@ exports.sitemap = sitemap;
 exports.default = gulp.series(
   clean,
   fonts,
-  pug,
   html,
   sitemap,
   robots,
