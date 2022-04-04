@@ -16,9 +16,12 @@
   }
   &__block {
     max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .icon {
       display: block;
-      margin: 0 auto 35px;
+      margin: 35px;
     }
   }
   &__subheader {
@@ -30,7 +33,7 @@
   }
   &__text {
     span {
-      text-decoration-line: underline;
+      text-decoration: underline;
       color: #FF0000;
     }
   }
